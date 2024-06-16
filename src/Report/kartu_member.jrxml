@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="576" pageHeight="895" columnWidth="536" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="079eb446-7216-444f-a729-14e4b1c11d72">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="pid" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT id, nama, jenis_kelamin, No_hp, email FROM tb_member
+WHERE
+id=$P{pid};]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jenis_kelamin" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="No_hp" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="536" height="79" uuid="f24cd2f2-76b0-4e54-917b-acaa5e33c6c8"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="148" y="36" width="246" height="43" uuid="75f2d18d-59a9-4668-9b55-d3ce00efa674"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Perpustakaan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="148" y="0" width="246" height="55" uuid="65a99d28-83a7-4854-857b-58a3fc598c64"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kartu Member]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="185" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="34" width="100" height="20" uuid="a213a16d-0d9f-4143-9541-e45188d3b669"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="148" y="0" width="265" height="20" uuid="00a97484-90d1-4c32-8094-5ce1d39d344d"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="148" y="34" width="264" height="20" uuid="1e4a07c7-1243-427c-b1b0-a8553f105658"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="b07c6875-fe1c-4e53-9b2e-eae5f220625e"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Id Member]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="148" y="71" width="264" height="20" uuid="bcf43d0a-e9e7-42bd-a3ac-ad7e64a86f03"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jenis_kelamin}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="148" y="107" width="264" height="20" uuid="b30aa7e3-a02f-4927-8f81-385441f98ad8"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{No_hp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="148" y="142" width="264" height="20" uuid="719e4ae8-36c5-4419-84db-bfbe3e333148"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="71" width="100" height="20" uuid="49884f15-7cfb-417c-b982-cf6ece70bf99"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Jenis Kelamin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="107" width="100" height="20" uuid="5ab929bb-a331-4983-96e7-2317dde9aabb"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[No Hp]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="142" width="100" height="20" uuid="22f03b74-4add-42da-a8b4-6d7301596a81"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="119" y="0" width="13" height="20" uuid="1c15f44f-e165-4ed5-bf74-eba39ea98703"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="119" y="34" width="13" height="20" uuid="16213ca1-cafb-429b-9c15-f626c7b819ca"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="119" y="71" width="13" height="20" uuid="0abb9e43-d9bb-49ac-acd5-84c50acb036f"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="119" y="107" width="13" height="20" uuid="a1df240e-1a84-4282-a706-adbc4981563b"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="119" y="142" width="13" height="20" uuid="5bdda686-c263-4d4f-a9c5-47b9df8ed01c"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+</jasperReport>
